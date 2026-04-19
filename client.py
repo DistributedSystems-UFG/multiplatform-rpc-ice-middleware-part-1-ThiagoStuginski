@@ -8,4 +8,11 @@ printer = Demo.PrinterPrx.checkedCast(base)
 if not printer:
     raise RuntimeError("Invalid proxy")
 
-printer.printString("Hello World!")
+res1 = printer.printString("Hello World!")
+print(f"Resultado printString: {res1}")
+
+soma = printer.add(10, 25)
+print(f"Resultado add(10, 25): {soma}")
+
+invertida = printer.reverseString("ZeroC Ice")
+print(f"Resultado reverseString: {invertida}")
